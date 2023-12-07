@@ -5,12 +5,15 @@ module.exports = {
       '../ilkFlow.Backend/dist/manage/_internal',
       '../ilkFlow.Backend/dist/manage/manage.exe',
     ],
+    icon: './src/img/logo_256x256',
   },
   rebuildConfig: {},
   makers: [
     {
       name: '@electron-forge/maker-squirrel',
-      config: {},
+      config: {
+        // loadingGif:'./src/img/loading_0.gif'
+      },
     },
     {
       name: '@electron-forge/maker-zip',
