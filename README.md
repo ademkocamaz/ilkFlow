@@ -1,5 +1,7 @@
 # ilkFlow
 Electron + Django Business Process Management
+### Username / Kullanıcı Adı: ilkadam
+### Password / Şifre: 764864
 
 ![](/Screen/001.png)
 ![](/Screen/002.png)
