@@ -13,11 +13,12 @@ module.exports = {
       name: '@electron-forge/maker-squirrel',
       config: {
         // loadingGif:'./src/img/loading_0.gif'
+        //iconUrl: './src/img/logo_256x256.ico',
+        setupIcon: './src/img/logo_256x256.ico',
       },
     },
     {
       name: '@electron-forge/maker-zip',
-      platforms: ['darwin'],
     },
     {
       name: '@electron-forge/maker-deb',
