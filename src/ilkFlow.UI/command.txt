@@ -1,0 +1,2 @@
+npm install --save-dev @electron-forge/publisher-github
+npm install update-electron-app
