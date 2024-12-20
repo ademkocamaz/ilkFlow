@@ -12,7 +12,7 @@ const port = 21408
 const { spawn } = require('node:child_process');
 const startDjangoServer = () => {
 
-  const djangoBackend = spawn(path.join(process.resourcesPath, 'manage.exe'), ['runserver', port, '--noreload']);
+  const djangoBackend = spawn(path.join(process.resourcesPath, 'manage.exe'), ['runserver', '0.0.0.0:' + port, '--noreload']);
 
   app.on('before-quit', function () {
     djangoBackend.kill();
