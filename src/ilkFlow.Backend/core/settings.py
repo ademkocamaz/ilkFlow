@@ -23,7 +23,7 @@ SECRET_KEY = 'django-insecure-4_y0$6)49os0$gmhg6gyt5%d9&n2=v9dpyc7stpq&-^s_8!8%_
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -80,10 +80,13 @@ WSGI_APPLICATION = 'core.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
+from os import path, getenv
+
+db_path = path.join(getenv("LOCALAPPDATA"), "ilkFlow")
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+    "default": {
+        "ENGINE": "django.db.backends.sqlite3",
+        "NAME": path.join(db_path, "db.sqlite3"),
     }
 }
 
@@ -184,3 +187,7 @@ LOGGING = {
 
 MEDIA_ROOT = BASE_DIR / 'media'
 MEDIA_URL = '/media/'
+
+DJANGO_SUPERUSER_USERNAME = "ilkadam"
+DJANGO_SUPERUSER_PASSWORD = "ilkadam"
+DJANGO_SUPERUSER_EMAIL = "info@ilkadam.com.tr"
