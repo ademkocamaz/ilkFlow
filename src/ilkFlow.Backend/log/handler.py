@@ -5,11 +5,12 @@ from .config import DJANGO_DB_LOGGER_ENABLE_FORMATTER, MSG_STYLE_SIMPLE
 
 db_default_formatter = logging.Formatter()
 
+
 class DatabaseLogHandler(logging.Handler):
-    
+
     def emit(self, record):
-        from .models import Log
-        
+        from log.models import Log
+
         trace = None
 
         if record.exc_info:
@@ -22,13 +23,13 @@ class DatabaseLogHandler(logging.Handler):
 
         # print(record.__dict__)
 
-        user=record.__dict__.get('user')
+        user = record.__dict__.get("user")
         kwargs = {
-            'logger_name': record.name,
-            'level': record.levelno,
-            'msg': msg,
-            'trace': trace,
-            'user':user,
+            "logger_name": record.name,
+            "level": record.levelno,
+            "msg": msg,
+            "trace": trace,
+            "user": user,
             # 'user':record.user,
         }
 

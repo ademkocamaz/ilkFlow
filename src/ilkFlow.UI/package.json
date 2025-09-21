@@ -1,7 +1,7 @@
 {
   "name": "ilkflow",
   "productName": "ilkFlow",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "description": "Business Process Management",
   "main": "src/main.js",
   "scripts": {
